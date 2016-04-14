@@ -59,6 +59,7 @@ $(document).ready(function () {
     $("#trainingPage").hide();
     $("#statsPage").hide();
     $("#gameWindow").hide();
+    $("#help").hide();
 
    // get the data from user.json file
 
@@ -101,6 +102,7 @@ $(document).ready(function () {
         $("#trainingPage").hide(500);
         $("#statsPage").hide(500);
         $("#gameWindow").hide(500);
+        $("#help").hide(500);
     });
     $("#gameBtn").click(function () {
         $("#loginPage").hide(500);
@@ -108,6 +110,7 @@ $(document).ready(function () {
         $("#trainingPage").hide(500);
         $("#statsPage").hide(500);
         $("#gameWindow").hide(500);
+        $("#help").hide(500);
     });
     $("#trainBtn").click(function () {
         $("#loginPage").hide(500);
@@ -115,6 +118,7 @@ $(document).ready(function () {
         $("#trainingPage").show(500);
         $("#statsPage").hide(500);
         $("#gameWindow").hide(500);
+        $("#help").hide(500);
     });
     $("#statsBtn").click(function () {
         $("#loginPage").hide(500);
@@ -123,6 +127,7 @@ $(document).ready(function () {
         updateStats();
         $("#statsPage").show(500);
         $("#gameWindow").hide(500);
+        $("#help").hide(500);
     });
     $("#game2Btn").click(function () {
         $("#loginPage").hide(500);
@@ -131,6 +136,16 @@ $(document).ready(function () {
         updateStats();
         $("#statsPage").hide(500);
         $("#gameWindow").show(500);
+        $("#help").hide(500);
+    });
+    $("#helpBtn").click(function () {
+        $("#loginPage").hide(500);
+        $("#gamePage").hide(500);
+        $("#trainingPage").hide(500);
+        updateStats();
+        $("#statsPage").hide(500);
+        $("#gameWindow").hide(500);
+        $("#help").show(500);
     });
 
     //END COPPEEYY

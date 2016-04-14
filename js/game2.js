@@ -2,6 +2,9 @@
  * Created by elya on 14-Apr-16.
  */
 
+var jData2 = JSON.parse(localStorage.getItem('jsonData'));
+var currUSER2 = localStorage.getItem('currentUserIndex');
+
 var game2Words = [["בא אל אבותיו ", "נפטר"],
     ["באבו ", "בצעירותו"],
     ["באותות ובמופתים", "באופן משכנע, באמצעות הוכחות חותכות."],
@@ -27,7 +30,7 @@ var game2Words = [["בא אל אבותיו ", "נפטר"],
 //first place represent the question and last 4 are the questions
 var game2WordsArr = [-1,-1,-1,-1,-1];
 var correctAnswer2 = 0;
-
+var clickedFlag = false;
 function initAnswers2() {
     "use strict";
     var i = 1;
@@ -135,11 +138,14 @@ $( document ).ready(function() {
 
     $("#startBtnGame2").click(function () {
         //set colors back to black
-        document.getElementById("ans1Game2").style.color = "black";
-        document.getElementById("ans2Game2").style.color = "black";
-        document.getElementById("ans3Game2").style.color = "black";
-        document.getElementById("ans4Game2").style.color = "black";
-        document.getElementById("ans5Game2").style.color = "black";
+        document.getElementById("ans1Game2").style.color = "#F2B632";
+        document.getElementById("ans2Game2").style.color = "#F2B632";
+        document.getElementById("ans3Game2").style.color = "#F2B632";
+        document.getElementById("ans4Game2").style.color = "#F2B632";
+        document.getElementById("ans5Game2").style.color = "#F2B632";
+
+        //reset click
+        clickedFlag = false;
 
         $('#startBtnGame2').attr("disabled", true);
 
@@ -162,67 +168,94 @@ $( document ).ready(function() {
 
     //click on answer
     $("#ans1Game2").click(function () {
-        if(game2WordsArr[0] === correctAnswer2)
-        {
-            document.getElementById("ans1Game2").style.color = "#00FF00";
-            document.getElementById("ans1Game2").innerHTML = "Correct";
+        if(!clickedFlag){
+            clickedFlag = true;
+            if(game2WordsArr[0] === correctAnswer2)
+            {
+                document.getElementById("ans1Game2").style.color = "#00FF00";
+                document.getElementById("ans1Game2").innerHTML = "Correct";
+                jData[currUSER].rightAns++;
+            }
+            else
+            {
+                document.getElementById("ans1Game2").style.color = "RED";
+                document.getElementById("ans1Game2").innerHTML = "Wrong!";
+                jData[currUSER].wrongAns++;
+            }
         }
-        else
-        {
-            document.getElementById("ans1Game2").style.color = "RED";
-            document.getElementById("ans1Game2").innerHTML = "Wrong!";
-        }
+
     });
 
     $("#ans2Game2").click(function () {
-        if(game2WordsArr[1] === correctAnswer2)
-        {
-            document.getElementById("ans2Game2").style.color = "#00FF00";
-            document.getElementById("ans2Game2").innerHTML = "Correct";
-        }
-        else
-        {
-            document.getElementById("ans2Game2").style.color = "RED";
-            document.getElementById("ans2Game2").innerHTML = "Wrong!";
+        if(!clickedFlag) {
+            clickedFlag = true;
+            if(game2WordsArr[1] === correctAnswer2)
+            {
+                document.getElementById("ans2Game2").style.color = "#00FF00";
+                document.getElementById("ans2Game2").innerHTML = "Correct";
+                jData[currUSER].rightAns++;
+            }
+            else
+            {
+                document.getElementById("ans2Game2").style.color = "RED";
+                document.getElementById("ans2Game2").innerHTML = "Wrong!";
+                jData[currUSER].wrongAns++;
+            }
         }
     });
 
     $("#ans3Game2").click(function () {
-        if(game2WordsArr[2] === correctAnswer2)
-        {
-            document.getElementById("ans3Game2").style.color = "#00FF00";
-            document.getElementById("ans3Game2").innerHTML = "Correct";
-        }
-        else
-        {
-            document.getElementById("ans3Game2").style.color = "RED";
-            document.getElementById("ans3Game2").innerHTML = "Wrong!";
+        if(!clickedFlag) {
+            clickedFlag = true;
+            if(game2WordsArr[2] === correctAnswer2)
+            {
+                document.getElementById("ans3Game2").style.color = "#00FF00";
+                document.getElementById("ans3Game2").innerHTML = "Correct";
+                jData[currUSER].rightAns++;
+            }
+            else
+            {
+                document.getElementById("ans3Game2").style.color = "RED";
+                document.getElementById("ans3Game2").innerHTML = "Wrong!";
+                jData[currUSER].wrongAns++;
+            }
         }
     });
 
     $("#ans4Game2").click(function () {
-        if(game2WordsArr[3] === correctAnswer2)
-        {
-            document.getElementById("ans4Game2").style.color = "#00FF00";
-            document.getElementById("ans4Game2").innerHTML = "Correct";
+        if(!clickedFlag) {
+            clickedFlag = true;
+            if(game2WordsArr[3] === correctAnswer2)
+            {
+                document.getElementById("ans4Game2").style.color = "#00FF00";
+                document.getElementById("ans4Game2").innerHTML = "Correct";
+                jData[currUSER].rightAns++;
+            }
+            else
+            {
+                document.getElementById("ans4Game2").style.color = "RED";
+                document.getElementById("ans4Game2").innerHTML = "Wrong!";
+                jData[currUSER].wrongAns++;
+            }
         }
-        else
-        {
-            document.getElementById("ans4Game2").style.color = "RED";
-            document.getElementById("ans4Game2").innerHTML = "Wrong!";
-        }
+
     });
 
     $("#ans5Game2").click(function () {
-        if(game2WordsArr[4] === correctAnswer2)
-        {
-            document.getElementById("ans5Game2").style.color = "#00FF00";
-            document.getElementById("ans5Game2").innerHTML = "Correct";
-        }
-        else
-        {
-            document.getElementById("ans5Game2").style.color = "RED";
-            document.getElementById("ans5Game2").innerHTML = "Wrong!";
+        if(!clickedFlag) {
+            clickedFlag = true;
+            if(game2WordsArr[4] === correctAnswer2)
+            {
+                document.getElementById("ans5Game2").style.color = "#00FF00";
+                document.getElementById("ans5Game2").innerHTML = "Correct";
+                jData[currUSER].rightAns++;
+            }
+            else
+            {
+                document.getElementById("ans5Game2").style.color = "RED";
+                document.getElementById("ans5Game2").innerHTML = "Wrong!";
+                jData[currUSER].wrongAns++;
+            }
         }
     });
 

@@ -52,3 +52,20 @@ textarea {
     height: 12px;
     width: 360px;
 }
+
+#statsPage{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    color: #FFFFFF;
+    font-family: Impact;
+    font-size: x-large;
+    font-weight: normal;
+    background-color: #252839;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+    border: 9px solid #f2b632;
+    height: 640px;
+}
