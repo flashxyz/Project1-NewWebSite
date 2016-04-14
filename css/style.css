@@ -1,0 +1,54 @@
+/*color palette*/
+/* #252839 #677077 #b5b5b7 #f2b632 */
+body{
+    position: relative;
+    background-color: #677077;
+}
+/*-----------Nav bar colors---------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #252839;
+    font-family: Impact;
+    font-size: xx-large;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #f2b632;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #677077;
+}
+
+/*-----------Nav bar colors END!---------*/
+
+
+.container{
+    background-color: #677077;
+    height : 100%;
+    color: #252839;
+
+}
+
+/*----------------------questions part----------*/
+textarea {
+    background-color: transparent;
+    border: 0px solid;
+    size: 50px;
+    height: 12px;
+    width: 360px;
+}
