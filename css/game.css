@@ -11,7 +11,7 @@
 }
 #answer_text{
     display: block;
-    width: 80%;
+    width: 90%;
 /*    margin-right: 70%;*/
 }
 #textTrueAnswers{
@@ -139,7 +139,6 @@
 
 #gameStartBTN {
     background-color: #252839;
-/*    color: #f2b632;*/
     color: #f2b632;
     font-family: Impact;
     border-radius: 22px;
@@ -147,7 +146,6 @@
     padding-bottom: 2%;
     padding-left: 4%;
     padding-right: 4%;
-    cursor: pointer;
     font-weight: 600;
     font-style: oblique;
     font-variant: small-caps;
@@ -232,16 +230,46 @@ text-shadow: rgb(3, 3, 3) 4px 4px 4px;
     font-weight: bold;
 }
 
+#gameAnsCounters{
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#timer{
+    color: #f2b632;
+    width: auto;
+    background: #252839;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    font-family: Impact;
+}
 #buttonBarGameTrue{
-    margin: -30% 5% 35% 75%;
+    background: #252839;
+    padding-right:   10px;
+     padding-left:   10px;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-color: #f2b632;
     color: greenyellow;
     font-weight: 800;
     font-style: oblique;
     font-variant: small-caps;
+    float:left;
 }
 #buttonBarGameFalse{
-    margin: -40% 80% 1% 1%;
-    color: maroon;
+    background: #252839;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-color: #f2b632;
+    padding-left:   10px;
+    padding-right:   10px;
+    float:left;
+    color: red;
      font-weight: 800;
     font-style: oblique;
     font-variant: small-caps;
